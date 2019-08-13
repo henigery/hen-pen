@@ -1,0 +1,132 @@
+$bg-color-d: #191F24;
+$bg-color-l: rgb(239, 239, 240);
+$font-color: rgb(238, 236, 236);
+
+body{
+    background-color: $bg-color-d;
+    text-align: center;
+    
+}
+h1{
+    color: $bg-color-l;
+    text-align: center;
+    span{
+        font-size: 15px;
+        color: rgb(0, 183, 255) !important;
+    }
+}
+
+textarea {
+    resize: none;
+}
+
+#mode{
+    display: flex;
+    flex-direction: row;
+    color: $bg-color-l;
+    position: absolute;
+    top: 20px;;
+    right: 20px;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 15px;
+    .btn{
+        width: 60px;
+        height: 20px;
+        margin:0 5vw 0 5vw;
+        background-color: white;
+        cursor: pointer;
+        border-radius: 15px;
+        border: $bg-color-d solid 2px;
+        transition: border 150ms;
+       
+        &:hover{
+            border: rgb(0, 183, 255) solid 2px;
+        }
+    }
+    
+}
+
+#terminals{
+    display: grid;
+    grid-gap: 15px;
+    margin-top: 15px;
+    width: 100%;
+    align-content: center;
+    grid-template: "html css js" 30vh
+                    / 32% 32% 32%;
+
+    
+    #html{
+        grid-area: html;
+        background-color: $bg-color-l;
+        border: $bg-color-d solid 2px; 
+    }
+
+    #css{
+        grid-area: css;
+        background-color: $bg-color-l;
+        border: $bg-color-d solid 2px; 
+    }
+    #js{
+        grid-area: js;
+        background-color: $bg-color-l;
+        border: $bg-color-d solid 2px; 
+    }
+    
+    @media screen and (max-width: 1600px){
+        grid-template: "html html css css" 25vh
+                       ". js js ." 25vh
+                       / 25% 25% 25% 25% ;
+    }
+    @media screen and (max-width: 600px){
+        grid-template: "html" 20vh
+                       "css" 20vh
+                       "js" 20vh
+                       / 100%;
+    }
+}
+
+#code{
+    background-color: $bg-color-l;
+    border: $bg-color-d solid 2px; 
+    margin-left: auto;
+    width: 90%;
+    height: 60vh;
+    margin-top: 15px;
+}
+
+.linker{
+    margin-top: 15px;
+    justify-content: center;
+    position: sticky;
+    input{
+        position: absolute;
+        height: 30px;
+        width: min-content;
+        border-radius: 15px;
+        border: rgb(0, 183, 255) solid 2px;
+    }
+    button{
+        text-align: center;
+        width: 24px;
+        position: sticky;
+        border-radius: 15px;
+        outline:none;
+        margin: 5px 0 0 150px;
+        background-color: rgb(0, 183, 255);
+        border: rgb(57, 216, 57) solid 2px; 
+        cursor: pointer;
+        label{
+            color: whitesmoke;
+            cursor: pointer;
+        }
+    }
+    
+}
+:focus { outline: none; }

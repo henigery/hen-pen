@@ -1,0 +1,32 @@
+<html>
+    <head>
+      <title>Hen Pen</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+      <h1 id="label">Hen<span>(ige)</span> Pen</h1>
+      <label id="mode"><div id="mlabel">Dark</div><input type="checkbox" id="box" onclick="change()"  title="Light mode is for crazy people" ></label>
+      <div class="buttons">
+        <span class="btn" id="btnhtml">HTML</span>
+        <span class="btn" id="btncss">CSS</span>
+        <span class="btn" id="btnjs">JS</span>
+      </div>
+      <iframe id="code"></iframe>
+      <div id="terminals">
+        <textarea id="html" placeholder="HTML" spellcheck="false"></textarea>
+        <textarea id="css" placeholder="CSS" spellcheck="false"></textarea>
+        <textarea id="js" placeholder="JavaScript" spellcheck="false"></textarea>
+      </div>
+      
+      <div class="linker">
+        <input type="text" class="form-control" id="input-fileName" placeholder="  Enter file name">
+        <button id="btn-save" onclick="download()" type="submit"><label>&#10004</label></button>
+      </div>
+
+      <script type="text/javascript" src="app.js" spellcheck="false"></script>
+
+    </body>
+  </html>
